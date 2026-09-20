@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preguntas frecuentes — Bruma & Esencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg: #F7F3EC; --card: #FFFFFF; --ink: #26332C; --ink-soft: #5B6960;
+    --sage: #8B9A7D; --plum: #8E5A6B; --line: #E4DDD0; --danger: #B15C4B;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{ margin:0; background: var(--bg); color: var(--ink); font-family: 'Work Sans', sans-serif; line-height: 1.5; }
+  h1,h2,h3{ font-family: 'Fraunces', serif; margin: 0; font-weight: 600; }
+  a{ color: inherit; }
+  .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+  nav{ display:flex; align-items:center; justify-content:space-between; padding: 24px 28px; max-width: 1100px; margin: 0 auto; }
+  .brand{ font-family:'Fraunces', serif; font-size: 22px; }
+  .brand span{ color: var(--plum); }
+  .nav-links{ display:flex; gap: 24px; font-size: 15px; align-items:center; flex-wrap: wrap; }
+  .nav-links a{ text-decoration:none; color: var(--ink-soft); }
+  .nav-links a:hover{ color: var(--ink); }
+  .nav-links a.activo{ color: var(--ink); font-weight: 600; }
+  .hero{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items:center; padding: 40px 0 80px; }
+  .hero h1{ font-size: 46px; line-height: 1.15; }
+  .hero p.tagline{ color: var(--ink-soft); font-size: 17px; max-width: 42ch; margin-top: 18px; }
+  .hero .cta{ display:inline-block; margin-top: 30px; padding: 13px 26px; background: var(--ink); color: #fff; text-decoration:none; border-radius: 3px; font-size: 15px; }
+  .hero .cta:hover{ background: var(--plum); }
+  .bottle{ width: 100%; max-width: 320px; margin: 0 auto; display:block; }
+  .section-head{ margin-bottom: 36px; display:flex; justify-content:space-between; align-items:flex-end; gap: 16px; flex-wrap:wrap; }
+  .section-head p{ color: var(--ink-soft); margin-top: 8px; max-width: 50ch; }
+  #catalogo{ padding: 60px 0 80px; border-top: 1px solid var(--line); }
+  .toolbar{ display:flex; gap: 14px; flex-wrap: wrap; align-items:center; margin-bottom: 32px; }
+  .tabs-categoria{ display:flex; gap: 8px; flex-wrap: wrap; }
+  .tab-categoria{ padding: 9px 16px; border-radius: 20px; border: 1px solid var(--line); background: var(--card); color: var(--ink-soft); font-family: inherit; font-size: 13px; cursor:pointer; }
+  .tab-categoria:hover{ border-color: var(--ink); color: var(--ink); }
+  .tab-categoria.activa{ background: var(--ink); color:#fff; border-color: var(--ink); }
+  .toolbar input[type="text"]{ flex: 1; min-width: 200px; padding: 11px 14px; border: 1px solid var(--line); border-radius: 3px; font-family: inherit; font-size: 14px; background: var(--card); }
+  .toolbar select{ padding: 11px 14px; border: 1px solid var(--line); border-radius: 3px; font-family: inherit; font-size: 14px; background: var(--card); color: var(--ink); }
+  .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card{ background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 22px; display:flex; flex-direction:column; gap: 10px; position:relative; }
+  .card.agotado{ opacity: 0.6; }
+  .badge-agotado{ position:absolute; top: 16px; right: 16px; font-size: 11px; letter-spacing: 0.5px; background: var(--danger); color:#fff; padding: 3px 9px; border-radius: 20px; text-transform:uppercase; }
+  .badge-categoria{ display:inline-block; font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .swatch{ width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.06); }
+  .foto-producto{ width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 3px; border: 1px solid var(--line); background: var(--bg); }
+  .card h3{ font-size: 19px; margin-top: 4px; }
+  .notes{ color: var(--ink-soft); font-size: 14px; min-height: 40px; }
+  .meta-row{ display:flex; justify-content:space-between; align-items:baseline; margin-top: 8px; padding-top: 14px; border-top: 1px dashed var(--line); }
+  .size{ font-size: 13px; color: var(--ink-soft); }
+  .price{ font-family:'Fraunces', serif; font-size: 20px; color: var(--plum); }
+  .consultar{ margin-top: 10px; text-align:center; padding: 10px; text-decoration:none; border: 1px solid var(--ink); border-radius: 3px; font-size: 14px; color: var(--ink); }
+  .consultar:hover{ background: var(--ink); color: #fff; }
+  .consultar.deshabilitado{ pointer-events:none; opacity:0.4; border-color: var(--ink-soft); color: var(--ink-soft); }
+  .no-results{ color: var(--ink-soft); padding: 40px 0; text-align:center; }
+  #contacto{ padding: 60px 0 90px; border-top: 1px solid var(--line); }
+  .contact-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
+  form{ display:flex; flex-direction:column; gap: 14px; }
+  label{ font-size: 13px; color: var(--ink-soft); }
+  input, textarea{ width:100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 3px; font-family: inherit; font-size: 14px; background: var(--card); color: var(--ink); }
+  textarea{ min-height: 110px; resize: vertical; }
+  button[type="submit"]{ padding: 13px; background: var(--ink); color:#fff; border:none; border-radius: 3px; font-family: inherit; font-size: 15px; cursor:pointer; margin-top: 4px; }
+  button[type="submit"]:hover{ background: var(--plum); }
+  .form-msg{ font-size: 14px; color: var(--sage); min-height: 18px; }
+  .info-card{ background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 28px; }
+  .info-card h3{ font-size: 18px; margin-bottom: 18px; }
+  .info-row{ display:flex; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .info-row:first-of-type{ border-top:none; }
+  .info-row .label{ color: var(--ink-soft); min-width: 90px; }
+  footer{ text-align:center; padding: 30px 0; color: var(--ink-soft); font-size: 13px; border-top: 1px solid var(--line); }
+  @media (max-width: 760px){
+    .hero{ grid-template-columns: 1fr; text-align:left; }
+    .hero h1{ font-size: 34px; }
+    .bottle{ max-width: 220px; margin-top: 20px; }
+    .grid{ grid-template-columns: 1fr; }
+    .contact-grid{ grid-template-columns: 1fr; }
+    .nav-links{ gap: 16px; font-size: 14px; }
+  }
+
+  .pagina-contenido{ padding: 40px 0 80px; }
+  .pagina-contenido h1{ font-size: 38px; margin-bottom: 18px; }
+  .pagina-contenido > p.intro{ color: var(--ink-soft); font-size: 17px; max-width: 60ch; margin-bottom: 40px; }
+  .bloque-texto{ max-width: 68ch; margin-bottom: 28px; }
+  .bloque-texto h3{ font-size: 18px; margin-bottom: 10px; }
+  .bloque-texto p{ color: var(--ink-soft); font-size: 15px; }
+  .faq-item{ border-top: 1px solid var(--line); }
+  .faq-item:last-child{ border-bottom: 1px solid var(--line); }
+  .faq-pregunta{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding: 18px 4px; font-family: 'Fraunces', serif; font-size: 17px; color: var(--ink);
+    display:flex; justify-content:space-between; align-items:center; gap: 12px;
+  }
+  .faq-pregunta .icono{ font-size: 20px; color: var(--ink-soft); transition: transform 0.2s; }
+  .faq-item.abierto .faq-pregunta .icono{ transform: rotate(45deg); }
+  .faq-respuesta{ max-height:0; overflow:hidden; transition: max-height 0.25s ease; }
+  .faq-item.abierto .faq-respuesta{ max-height: 400px; }
+  .faq-respuesta p{ color: var(--ink-soft); font-size: 15px; padding: 0 4px 20px; max-width: 62ch; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Bruma <span>&amp; Esencia</span></div>
+  <div class="nav-links">
+    <a href="index.html#catalogo">Catálogo</a>
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+    <a href="preguntas-frecuentes.html" class="activo">Preguntas frecuentes</a>
+    <a href="index.html#contacto">Contacto</a>
+  </div>
+</nav>
+
+<div class="wrap pagina-contenido">
+  <h1>Preguntas frecuentes</h1>
+  <p class="intro">Reemplaza cada respuesta de ejemplo con tu información real — edita el texto directamente en este archivo.</p>
+
+  <div id="listaFaq">
+  <div class="faq-item">
+    <button class="faq-pregunta" type="button" data-faq="0">
+      <span>¿Qué métodos de pago aceptan?</span>
+      <span class="icono">+</span>
+    </button>
+    <div class="faq-respuesta">
+      <p>[Ejemplo: transferencia bancaria, depósito, o pago contra entrega. Reemplaza este texto con tus métodos reales.]</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-pregunta" type="button" data-faq="1">
+      <span>¿Hacen envíos? ¿Cuánto tarda?</span>
+      <span class="icono">+</span>
+    </button>
+    <div class="faq-respuesta">
+      <p>[Ejemplo: hacemos envíos a todo Guatemala vía Cargo Expreso, 2-4 días hábiles. Indica tus zonas de cobertura y tiempos reales.]</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-pregunta" type="button" data-faq="2">
+      <span>¿Los productos son originales?</span>
+      <span class="icono">+</span>
+    </button>
+    <div class="faq-respuesta">
+      <p>[Explica aquí la procedencia de tus productos y cómo garantizas que son originales/auténticos.]</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-pregunta" type="button" data-faq="3">
+      <span>¿Puedo cambiar o devolver un producto?</span>
+      <span class="icono">+</span>
+    </button>
+    <div class="faq-respuesta">
+      <p>[Describe tu política de cambios y devoluciones, si aplica.]</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-pregunta" type="button" data-faq="4">
+      <span>¿Cómo hago un pedido?</span>
+      <span class="icono">+</span>
+    </button>
+    <div class="faq-respuesta">
+      <p>[Ejemplo: escríbenos por WhatsApp desde el botón de cualquier producto del catálogo, o llena el formulario de contacto.]</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<footer>Bruma &amp; Esencia — catálogo, 2026</footer>
+
+<script>
+  document.getElementById('listaFaq').addEventListener('click', (e) => {
+    const btn = e.target.closest('.faq-pregunta');
+    if (!btn) return;
+    btn.closest('.faq-item').classList.toggle('abierto');
+  });
+</script>
+
+</body>
+</html>
