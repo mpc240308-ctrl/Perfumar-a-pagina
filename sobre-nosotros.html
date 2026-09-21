@@ -13,28 +13,73 @@
     --bg: #F7F3EC; --card: #FFFFFF; --ink: #26332C; --ink-soft: #5B6960;
     --sage: #8B9A7D; --plum: #8E5A6B; --line: #E4DDD0; --danger: #B15C4B;
   }
+  :root[data-theme="dark"]{
+    --bg: #1E211D; --card: #2A2E27; --ink: #F2EFE8; --ink-soft: #ABB3A6;
+    --line: #3A3F37;
+  }
+  html{
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(900px circle at 88% -8%, rgba(142,90,107,0.16) 0%, transparent 55%),
+      radial-gradient(700px circle at -8% 35%, rgba(139,154,125,0.16) 0%, transparent 55%),
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22260%22%20height%3D%22260%22%20viewBox%3D%220%200%20260%20260%22%3E%20%3Cg%20fill%3D%22%238B9A7D%22%20fill-opacity%3D%220.16%22%3E%20%20%3Cpath%20d%3D%22M40%2030%20C70%2010%2C%2095%2035%2C%2080%2070%20C60%2060%2C%2035%2055%2C%2040%2030%20Z%22/%3E%20%20%3Cpath%20d%3D%22M40%2030%20C55%2035%2C%2065%2050%2C%2080%2070%22%20stroke%3D%22%238B9A7D%22%20stroke-width%3D%221.2%22%20fill%3D%22none%22%20stroke-opacity%3D%220.22%22/%3E%20%3C/g%3E%20%3Cg%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.14%22%3E%20%20%3Cpath%20d%3D%22M190%20140%20C220%20122%2C%20244%20146%2C%20230%20178%20C210%20168%2C%20184%20164%2C%20190%20140%20Z%22/%3E%20%3C/g%3E%20%3Cg%20fill%3D%22%238B9A7D%22%20fill-opacity%3D%220.13%22%3E%20%20%3Cpath%20d%3D%22M110%20190%20C140%20172%2C%20163%20196%2C%20150%20226%20C130%20216%2C%20105%20213%2C%20110%20190%20Z%22/%3E%20%3C/g%3E%20%3Ccircle%20cx%3D%22215%22%20cy%3D%2245%22%20r%3D%223%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.30%22/%3E%20%3Ccircle%20cx%3D%22230%22%20cy%3D%2260%22%20r%3D%221.6%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.24%22/%3E%20%3Ccircle%20cx%3D%2225%22%20cy%3D%22150%22%20r%3D%222.2%22%20fill%3D%22%238B9A7D%22%20fill-opacity%3D%220.26%22/%3E%20%3Ccircle%20cx%3D%22150%22%20cy%3D%2260%22%20r%3D%221.8%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.20%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: auto, auto, 260px 260px;
+    background-attachment: fixed, fixed, fixed;
+    transition: background-color 0.2s;
+  }
+  :root[data-theme="dark"] html{
+    background-image:
+      radial-gradient(1000px circle at 50% -15%, rgba(139,154,125,0.10) 0%, transparent 55%),
+      radial-gradient(700px circle at 100% 100%, rgba(142,90,107,0.10) 0%, transparent 55%),
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22220%22%20height%3D%22320%22%20viewBox%3D%220%200%20220%20320%22%3E%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%238B9A7D%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%222%22%3E%20%20%3Cpath%20d%3D%22M30%20320%20C28%20250%2C%2045%20200%2C%2040%20120%20C38%2080%2C%2050%2050%2C%2046%2010%22/%3E%20%3C/g%3E%20%3Cg%20fill%3D%22%238B9A7D%22%20fill-opacity%3D%220.15%22%3E%20%20%3Cellipse%20cx%3D%2230%22%20cy%3D%2290%22%20rx%3D%2216%22%20ry%3D%226%22%20transform%3D%22rotate%28-35%2030%2090%29%22/%3E%20%20%3Cellipse%20cx%3D%2255%22%20cy%3D%22105%22%20rx%3D%2216%22%20ry%3D%226%22%20transform%3D%22rotate%2835%2055%20105%29%22/%3E%20%20%3Cellipse%20cx%3D%2226%22%20cy%3D%22140%22%20rx%3D%2215%22%20ry%3D%225.5%22%20transform%3D%22rotate%28-30%2026%20140%29%22/%3E%20%20%3Cellipse%20cx%3D%2252%22%20cy%3D%22152%22%20rx%3D%2215%22%20ry%3D%225.5%22%20transform%3D%22rotate%2830%2052%20152%29%22/%3E%20%20%3Cellipse%20cx%3D%2224%22%20cy%3D%22190%22%20rx%3D%2214%22%20ry%3D%225%22%20transform%3D%22rotate%28-25%2024%20190%29%22/%3E%20%20%3Cellipse%20cx%3D%2248%22%20cy%3D%22200%22%20rx%3D%2214%22%20ry%3D%225%22%20transform%3D%22rotate%2825%2048%20200%29%22/%3E%20%20%3Cellipse%20cx%3D%2234%22%20cy%3D%22240%22%20rx%3D%2213%22%20ry%3D%225%22%20transform%3D%22rotate%28-22%2034%20240%29%22/%3E%20%20%3Cellipse%20cx%3D%2255%22%20cy%3D%22248%22%20rx%3D%2213%22%20ry%3D%225%22%20transform%3D%22rotate%2822%2055%20248%29%22/%3E%20%3C/g%3E%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%238B9A7D%22%20stroke-opacity%3D%220.13%22%20stroke-width%3D%222%22%3E%20%20%3Cpath%20d%3D%22M190%20300%20C192%20260%2C%20178%20230%2C%20184%20190%20C186%20160%2C%20175%20140%2C%20180%20110%22/%3E%20%3C/g%3E%20%3Cg%20fill%3D%22%238B9A7D%22%20fill-opacity%3D%220.13%22%3E%20%20%3Cellipse%20cx%3D%22182%22%20cy%3D%22160%22%20rx%3D%2213%22%20ry%3D%225%22%20transform%3D%22rotate%2830%20182%20160%29%22/%3E%20%20%3Cellipse%20cx%3D%22160%22%20cy%3D%22170%22%20rx%3D%2213%22%20ry%3D%225%22%20transform%3D%22rotate%28-30%20160%20170%29%22/%3E%20%20%3Cellipse%20cx%3D%22186%22%20cy%3D%22205%22%20rx%3D%2212%22%20ry%3D%224.5%22%20transform%3D%22rotate%2828%20186%20205%29%22/%3E%20%20%3Cellipse%20cx%3D%22165%22%20cy%3D%22215%22%20rx%3D%2212%22%20ry%3D%224.5%22%20transform%3D%22rotate%28-28%20165%20215%29%22/%3E%20%20%3Cellipse%20cx%3D%22180%22%20cy%3D%22250%22%20rx%3D%2211%22%20ry%3D%224.5%22%20transform%3D%22rotate%2825%20180%20250%29%22/%3E%20%3C/g%3E%20%3Ccircle%20cx%3D%22130%22%20cy%3D%2260%22%20r%3D%222.4%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.55%22/%3E%20%3Ccircle%20cx%3D%22130%22%20cy%3D%2260%22%20r%3D%226%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.12%22/%3E%20%3Ccircle%20cx%3D%2295%22%20cy%3D%22220%22%20r%3D%222%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.5%22/%3E%20%3Ccircle%20cx%3D%2295%22%20cy%3D%22220%22%20r%3D%225.5%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.1%22/%3E%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22270%22%20r%3D%221.8%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.45%22/%3E%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22270%22%20r%3D%225%22%20fill%3D%22%238E5A6B%22%20fill-opacity%3D%220.1%22/%3E%3C/svg%3E");
+    background-size: auto, auto, 220px 320px;
+  }
   *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
-  body{ margin:0; background: var(--bg); color: var(--ink); font-family: 'Work Sans', sans-serif; line-height: 1.5; }
+  html{ scroll-behavior: smooth; min-height: 100%; }
+  body{ margin:0; background: transparent; color: var(--ink); font-family: 'Work Sans', sans-serif; line-height: 1.5; transition: color 0.2s; }
   h1,h2,h3{ font-family: 'Fraunces', serif; margin: 0; font-weight: 600; }
   a{ color: inherit; }
   .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 28px; }
-  nav{ display:flex; align-items:center; justify-content:space-between; padding: 24px 28px; max-width: 1100px; margin: 0 auto; }
+  nav{
+    position: sticky; top: 0; z-index: 100;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  nav.con-sombra{ border-bottom-color: var(--line); }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between; padding: 18px 28px;
+    max-width: 1100px; margin: 0 auto;
+  }
   .brand{ font-family:'Fraunces', serif; font-size: 22px; }
   .brand span{ color: var(--plum); }
   .nav-links{ display:flex; gap: 24px; font-size: 15px; align-items:center; flex-wrap: wrap; }
   .nav-links a{ text-decoration:none; color: var(--ink-soft); }
   .nav-links a:hover{ color: var(--ink); }
   .nav-links a.activo{ color: var(--ink); font-weight: 600; }
+  .btn-utilidad{
+    border: 1px solid var(--line); background: var(--card); color: var(--ink-soft);
+    border-radius: 20px; padding: 7px 13px; font-family: inherit; font-size: 13px; cursor:pointer;
+  }
+  .btn-utilidad:hover{ border-color: var(--ink); color: var(--ink); }
   .hero{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items:center; padding: 40px 0 80px; }
   .hero h1{ font-size: 46px; line-height: 1.15; }
   .hero p.tagline{ color: var(--ink-soft); font-size: 17px; max-width: 42ch; margin-top: 18px; }
   .hero .cta{ display:inline-block; margin-top: 30px; padding: 13px 26px; background: var(--ink); color: #fff; text-decoration:none; border-radius: 3px; font-size: 15px; }
   .hero .cta:hover{ background: var(--plum); }
+  .hero .cta-secundaria{
+    display:inline-block; margin-top: 30px; margin-left: 12px; padding: 12px 25px;
+    border: 1px solid var(--ink); color: var(--ink); text-decoration:none; border-radius: 3px; font-size: 15px;
+  }
+  .hero .cta-secundaria:hover{ background: var(--ink); color: #fff; }
   .bottle{ width: 100%; max-width: 320px; margin: 0 auto; display:block; }
   .section-head{ margin-bottom: 36px; display:flex; justify-content:space-between; align-items:flex-end; gap: 16px; flex-wrap:wrap; }
   .section-head p{ color: var(--ink-soft); margin-top: 8px; max-width: 50ch; }
-  #catalogo{ padding: 60px 0 80px; border-top: 1px solid var(--line); }
+  #catalogo{ padding: 60px 0 80px; border-top: 1px solid var(--line); scroll-margin-top: 84px; }
   .toolbar{ display:flex; gap: 14px; flex-wrap: wrap; align-items:center; margin-bottom: 32px; }
   .tabs-categoria{ display:flex; gap: 8px; flex-wrap: wrap; }
   .tab-categoria{ padding: 9px 16px; border-radius: 20px; border: 1px solid var(--line); background: var(--card); color: var(--ink-soft); font-family: inherit; font-size: 13px; cursor:pointer; }
@@ -46,6 +91,7 @@
   .card{ background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 22px; display:flex; flex-direction:column; gap: 10px; position:relative; }
   .card.agotado{ opacity: 0.6; }
   .badge-agotado{ position:absolute; top: 16px; right: 16px; font-size: 11px; letter-spacing: 0.5px; background: var(--danger); color:#fff; padding: 3px 9px; border-radius: 20px; text-transform:uppercase; }
+  .marca-producto{ font-size: 12px; color: var(--ink-soft); margin-top: -4px; }
   .badge-categoria{ display:inline-block; font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
   .swatch{ width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.06); }
   .foto-producto{ width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 3px; border: 1px solid var(--line); background: var(--bg); }
@@ -58,7 +104,28 @@
   .consultar:hover{ background: var(--ink); color: #fff; }
   .consultar.deshabilitado{ pointer-events:none; opacity:0.4; border-color: var(--ink-soft); color: var(--ink-soft); }
   .no-results{ color: var(--ink-soft); padding: 40px 0; text-align:center; }
-  #contacto{ padding: 60px 0 90px; border-top: 1px solid var(--line); }
+  .no-encontraste{
+    margin-top: 30px; padding: 28px; text-align:center; background: var(--card);
+    border: 1px dashed var(--line); border-radius: 4px;
+  }
+  .no-encontraste h3{ font-size: 17px; margin-bottom: 8px; }
+  .no-encontraste p{ color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; max-width: 46ch; margin-left:auto; margin-right:auto; }
+  .no-encontraste a{
+    display:inline-block; padding: 10px 22px; background: var(--ink); color:#fff;
+    text-decoration:none; border-radius: 3px; font-size: 14px;
+  }
+  .no-encontraste a:hover{ background: var(--plum); }
+  #btnArriba{
+    position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: #fff; border: none; font-size: 18px; cursor: pointer;
+    display:flex; align-items:center; justify-content:center;
+    opacity: 0; pointer-events: none; transform: translateY(8px);
+    transition: opacity 0.2s, transform 0.2s; z-index: 90;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  }
+  #btnArriba.visible{ opacity: 1; pointer-events: auto; transform: translateY(0); }
+  #btnArriba:hover{ background: var(--plum); }
+  #contacto{ padding: 60px 0 90px; border-top: 1px solid var(--line); scroll-margin-top: 84px; }
   .contact-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
   form{ display:flex; flex-direction:column; gap: 14px; }
   label{ font-size: 13px; color: var(--ink-soft); }
@@ -106,12 +173,16 @@
 <body>
 
 <nav>
-  <div class="brand">Bruma <span>&amp; Esencia</span></div>
-  <div class="nav-links">
-    <a href="index.html#catalogo">Catálogo</a>
-    <a href="sobre-nosotros.html" class="activo">Sobre nosotros</a>
-    <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-    <a href="index.html#contacto">Contacto</a>
+  <div class="nav-inner">
+    <div class="brand">Bruma <span>&amp; Esencia</span></div>
+    <div class="nav-links">
+      <a href="index.html#catalogo" data-i18n="nav_catalogo">Catálogo</a>
+      <a href="sobre-nosotros.html" class="activo" data-i18n="nav_sobre">Sobre nosotros</a>
+      <a href="preguntas-frecuentes.html" class="" data-i18n="nav_faq">Preguntas frecuentes</a>
+      <a href="index.html#contacto" data-i18n="nav_contacto">Contacto</a>
+      <button class="btn-utilidad" id="btnIdioma" type="button" title="Change language">EN</button>
+      <button class="btn-utilidad" id="btnTema" type="button" title="Modo oscuro">🌙</button>
+    </div>
   </div>
 </nav>
 
@@ -150,6 +221,55 @@
 </div>
 
 <footer>Bruma &amp; Esencia — catálogo, 2026</footer>
+<button id="btnArriba" type="button" title="Volver arriba" aria-label="Volver arriba">↑</button>
+
+<script>
+  const TRAD_NAV = {
+    es: { nav_catalogo: "Catálogo", nav_sobre: "Sobre nosotros", nav_faq: "Preguntas frecuentes", nav_contacto: "Contacto", boton_idioma: "EN" },
+    en: { nav_catalogo: "Catalog", nav_sobre: "About us", nav_faq: "FAQ", nav_contacto: "Contact", boton_idioma: "ES" }
+  };
+  let idioma = localStorage.getItem('idioma') || 'es';
+  function aplicarIdiomaNav(){
+    document.documentElement.lang = idioma;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const clave = el.getAttribute('data-i18n');
+      if (TRAD_NAV[idioma][clave] !== undefined) el.textContent = TRAD_NAV[idioma][clave];
+    });
+    document.getElementById('btnIdioma').textContent = TRAD_NAV[idioma].boton_idioma;
+  }
+  document.getElementById('btnIdioma').addEventListener('click', () => {
+    idioma = idioma === 'es' ? 'en' : 'es';
+    localStorage.setItem('idioma', idioma);
+    aplicarIdiomaNav();
+  });
+  aplicarIdiomaNav();
+
+  const btnTema = document.getElementById('btnTema');
+  let tema = localStorage.getItem('tema') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  function aplicarTema(){
+    document.documentElement.setAttribute('data-theme', tema);
+    btnTema.textContent = tema === 'dark' ? '☀️' : '🌙';
+  }
+  btnTema.addEventListener('click', () => {
+    tema = tema === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('tema', tema);
+    aplicarTema();
+  });
+  aplicarTema();
+
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('con-sombra', window.scrollY > 4);
+  }, { passive: true });
+
+  const btnArriba = document.getElementById('btnArriba');
+  window.addEventListener('scroll', () => {
+    btnArriba.classList.toggle('visible', window.scrollY > 500);
+  }, { passive: true });
+  btnArriba.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
